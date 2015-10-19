@@ -33,6 +33,9 @@
                                 <rect key="frame" x="277" y="182" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Calc!"/>
+                                <connections>
+                                    <action selector="tapCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rx-fS-z44"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -43,6 +46,9 @@
                             <constraint firstItem="yEs-fh-hhq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q8G-HQ-nah"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="targetNumField" destination="2mF-rT-kQO" id="VGl-Vh-6LR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
