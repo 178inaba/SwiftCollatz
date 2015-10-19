@@ -23,5 +23,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapCalc(sender: UIButton) {
+        calcCollatz(UInt64(targetNumField.text!)!)
+    }
+
+    func calcCollatz(num: UInt64) {
+        print(num)
+
+        if num % 2 == 1 && num > 1 {
+            calcCollatz(3 * num + 1)
+        } else if num % 2 == 0 {
+            calcCollatz(num / 2)
+        }
     }
 }
