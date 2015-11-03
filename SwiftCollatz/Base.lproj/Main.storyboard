@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -37,13 +38,22 @@
                                     <action selector="tapCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rx-fS-z44"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-nY-2xZ">
+                                <rect key="frame" x="0.0" y="240" width="600" height="360"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2mF-rT-kQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEO-cR-etk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0pp-nY-2xZ" secondAttribute="bottom" id="RMg-nf-Fab"/>
                             <constraint firstItem="1Bu-pa-oLU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVn-hP-81l"/>
+                            <constraint firstItem="0pp-nY-2xZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="pi1-tV-jqM"/>
                             <constraint firstItem="yEs-fh-hhq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q8G-HQ-nah"/>
+                            <constraint firstItem="0pp-nY-2xZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vxo-Ph-Uqx"/>
+                            <constraint firstAttribute="trailing" secondItem="0pp-nY-2xZ" secondAttribute="trailing" id="ybU-kr-fbL"/>
                         </constraints>
                     </view>
                     <connections>
