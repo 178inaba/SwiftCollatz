@@ -17,21 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Collatz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-fh-hhq">
-                                <rect key="frame" x="250" y="28" width="100" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collatz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-fh-hhq">
+                                <rect key="frame" x="254" y="12" width="92" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.89019607840000003" green="0.25882352939999997" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mF-rT-kQO">
-                                <rect key="frame" x="252" y="94" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mF-rT-kQO">
+                                <rect key="frame" x="240" y="75" width="120" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bu-pa-oLU">
-                                <rect key="frame" x="277" y="182" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bu-pa-oLU">
+                                <rect key="frame" x="282.5" y="120" width="35" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Calc!"/>
                                 <connections>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-nY-2xZ">
-                                <rect key="frame" x="0.0" y="240" width="600" height="360"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="420"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -47,10 +47,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1Bu-pa-oLU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.45" id="FrG-5C-jdY"/>
                             <constraint firstItem="2mF-rT-kQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEO-cR-etk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0pp-nY-2xZ" secondAttribute="bottom" id="RMg-nf-Fab"/>
                             <constraint firstItem="1Bu-pa-oLU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVn-hP-81l"/>
-                            <constraint firstItem="0pp-nY-2xZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="pi1-tV-jqM"/>
+                            <constraint firstItem="2mF-rT-kQO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="g0X-Cx-462"/>
+                            <constraint firstItem="yEs-fh-hhq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.1" id="gsY-av-X4F"/>
+                            <constraint firstItem="2mF-rT-kQO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="oh2-lT-Nul"/>
+                            <constraint firstItem="0pp-nY-2xZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="pi1-tV-jqM"/>
                             <constraint firstItem="yEs-fh-hhq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q8G-HQ-nah"/>
                             <constraint firstItem="0pp-nY-2xZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vxo-Ph-Uqx"/>
                             <constraint firstAttribute="trailing" secondItem="0pp-nY-2xZ" secondAttribute="trailing" id="ybU-kr-fbL"/>
