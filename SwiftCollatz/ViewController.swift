@@ -8,13 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var targetNumField: UITextField!
+    @IBOutlet weak var resultView: UITableView!
+
+    // collatz results
+    var results: [UInt64] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        resultView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,10 +29,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapCalc(sender: UIButton) {
+        results = []
         calcCollatz(UInt64(targetNumField.text!)!)
+        resultView.reloadData()
     }
 
     func calcCollatz(num: UInt64) {
+        results.append(num)
         print(num)
 
         if num % 2 == 1 && num > 1 {
@@ -34,5 +43,18 @@ class ViewController: UIViewController {
         } else if num % 2 == 0 {
             calcCollatz(num / 2)
         }
+    }
+
+    // cell rows
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+
+    // change cell value
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+
+        cell.textLabel!.text = String(results[indexPath.row])
+        return cell
     }
 }

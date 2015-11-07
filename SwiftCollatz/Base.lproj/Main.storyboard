@@ -61,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resultView" destination="0pp-nY-2xZ" id="SjV-pv-6dd"/>
                         <outlet property="targetNumField" destination="2mF-rT-kQO" id="VGl-Vh-6LR"/>
                     </connections>
                 </viewController>
