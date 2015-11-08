@@ -30,6 +30,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     @IBAction func tapCalc(sender: UIButton) {
+        targetNumField.resignFirstResponder()
+
         results = []
         calcCollatz(UInt64(targetNumField.text!)!)
         resultView.reloadData()
