@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        targetNumField.keyboardType = .NumberPad
         resultView.dataSource = self
     }
 
